@@ -1,7 +1,18 @@
+//********NEED TO DO */
+/*
+- Create square color change when hovered
+- create reset button that changes it back to 16x16
+- change number input into a number SLIDER ******
+- CSS things *******
+
+*/
+//const number = quantity;
+
 const grid = document.getElementById("grid_div");
 const userInput = document.getElementById("quantity");
-const resetButton = document.querySelector(".reset");
+const reset_button = document.querySelector(".reset");
 const square_div = document.querySelector(".square");
+const output_div = document.querySelector('.grid-output')
 
 //popular choices
 const div_4 = document.getElementById("choice-4");
@@ -15,15 +26,21 @@ const div_88 = document.getElementById("choice-88");
 const div_100 = document.getElementById("choice-100");
 
 function createGrid(){
+  grid.innerHTML='';
+  grid.style.setProperty(
+    'grid-template-columns',
+    'repeat(16,2fr)'
+  );
+  grid.style.setProperty(
+    'grid-template-rows',
+    'repeat(16, 2fr)'
+  );
   for (let n=0; n < 256; n++){
     const div = document.createElement('div');
     div.classList.add('square') //create class .square
     grid.appendChild(div);
   };
-  
 }
-//Calls function
-createGrid();
 
 //upgrade grid
 function upgradeGrid(num){
@@ -33,27 +50,40 @@ function upgradeGrid(num){
       "grid-template-columns",
       `repeat(${num}, 2fr)`
     );
-
     grid.style.setProperty(
       "grid-template-rows",
       `repeat(${num}, 2fr)`
     );
-
     for (let i=0; i< (Math.pow(num,2)); i++){
       const div = document.createElement('div');
       div.classList.add('square') //create class .square
       grid.appendChild(div);
     }
   }
-
   else{
     console.log('error');
   }
 }
 
+//slider number change
+  function changeNumber(num){
+    output_div.innerText='';
+    output_div.innerText= num;
+}
 
-userInput.addEventListener("change", () => { upgradeGrid(`${userInput.value}`)}
-); 
+//Calls function
+  createGrid();
+//DOM EVENTS
+  reset_button.addEventListener('click',createGrid);
+  userInput.addEventListener("mousemove", () => { upgradeGrid(`${userInput.value}`)}); 
+  userInput.addEventListener("mousemove", () => { changeNumber(`${userInput.value}`)}); 
+
+
+
+
+
+
+/*
 //pop choice selected
 div_4.addEventListener("click", () => { upgradeGrid(4)}); 
 div_16.addEventListener("click", () => { upgradeGrid(16)}); 
@@ -68,7 +98,7 @@ div_100.addEventListener("click", () => { upgradeGrid(100)});
 
 
 
-
+*/
 
 
 

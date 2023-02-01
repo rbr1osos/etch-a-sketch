@@ -9,17 +9,45 @@
   </head>
 
 <body>
-<header>Etch-A-Sketch Generator</header>
+<header>Mouse-O-Sketch</header>
 
 <div class='content-container'>
+  <div class='colorSelector'>
+    <div id='color' class='black'>black</div>
+    <div id='color' class='gray'>gray</div>
+    <div id='color' class='rainbow'>rainbow</div>
+    <div id='color' class='eraser'>eraser</div>
+  </div>
+
   <div id='grid_div'></div>
 
-  <div class='right-content'>
-    <p class='title'>Select what type of grid you want!</p>
+  <div class='bottom'>
     <div class='userInput'>
-      <label for='quantity'>Select between 1-100</label>
-      <input type='number' id='quantity' name='quantity' min='1' max='100'>
+      <div class='slider'>
+        <label for='quantity'>Pixel Size</label>
+        <input type='range' id='quantity' name='quantity' min='4' max='50'>
+      </div>
+      <div class='grid-output'>16</div>
+    </div>
 
+    <button class='reset'>reset</button>
+  </div>
+
+</div>
+
+<div id='footer'>
+  <footer>Created by Ryan Briosos</footer>
+</div>
+
+<script src="script.js"></script>
+
+
+  </body>
+</html>
+
+
+
+      <!-- Popular Grid Choices 
       <div id='container-choice'>
         <div class='choices'>Popular Grid Choices</div>
           <div class='popular-choices'>
@@ -34,26 +62,4 @@
             <div class='pop-grid' id='choice-100'>100 x 100</div>
           </div>
       </div>
-
-    </div>
-  </div>
-</div>
-
-<script src="script.js"></script>
-
-  </body>
-</html>
-
-
-<!--    OLD code
-      <div class="right">
-      <div class="gridContainer"></div>
-    </div>
-<div class="page">
-  <h1>ETCH-A-SKETCH</h1>
-  <label for="quantity">Type A Value For Grid Size:</label>
-  <input type="number" id="quantity" name="quantity" />
-  <button class="reset">RESET</button>
-</div>
-
--->
+      -->
