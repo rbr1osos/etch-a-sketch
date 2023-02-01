@@ -7,16 +7,53 @@
     <link rel="stylesheet" type="text/css" href="styles.css" />
     <title>Etch-A-Sketch</title>
   </head>
-  <body>
-    <div class="right">
-      <div class="gridContainer"></div>
+
+<body>
+<header>Etch-A-Sketch Generator</header>
+
+<div class='content-container'>
+  <div id='grid_div'></div>
+
+  <div class='right-content'>
+    <p class='title'>Select what type of grid you want!</p>
+    <div class='userInput'>
+      <label for='quantity'>Select between 1-100</label>
+      <input type='number' id='quantity' name='quantity' min='1' max='100'>
+
+      <div id='container-choice'>
+        <div class='choices'>Popular Grid Choices</div>
+          <div class='popular-choices'>
+            <div class='pop-grid' id='choice-4'>4 x 4</div>
+            <div class='pop-grid' id='choice-16'>16 x 16</div>
+            <div class='pop-grid' id='choice-24'>24 x 24</div>
+            <div class='pop-grid' id='choice-32'>32 x 32</div>
+            <div class='pop-grid' id='choice-48'>48 x 48</div>
+            <div class='pop-grid' id='choice-64'>64 x 64</div>
+            <div class='pop-grid' id='choice-80'>80 x 80</div>
+            <div class='pop-grid' id='choice-88'>88 x 88</div>
+            <div class='pop-grid' id='choice-100'>100 x 100</div>
+          </div>
+      </div>
+
     </div>
-    <div class="page">
-      <h1>ETCH-A-SKETCH</h1>
-      <label for="quantity">Type A Value For Grid Size:</label>
-      <input type="number" id="quantity" name="quantity" />
-      <button class="reset">RESET</button>
-    </div>
-    <script src="script.js"></script>
+  </div>
+</div>
+
+<script src="script.js"></script>
+
   </body>
 </html>
+
+
+<!--    OLD code
+      <div class="right">
+      <div class="gridContainer"></div>
+    </div>
+<div class="page">
+  <h1>ETCH-A-SKETCH</h1>
+  <label for="quantity">Type A Value For Grid Size:</label>
+  <input type="number" id="quantity" name="quantity" />
+  <button class="reset">RESET</button>
+</div>
+
+-->

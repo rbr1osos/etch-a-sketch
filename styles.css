@@ -1,3 +1,112 @@
+
+*{
+  box-sizing: border-box;
+}
+
+body{
+  margin:0;
+  padding:0;
+  background-color: #252526;
+}
+
+header{
+  color:white;
+  font-size: 32px;
+  font-weight:700;
+  font-family: sans-serif;
+  text-align: center;
+  justify-content: center;
+  padding:40px;
+  background:linear-gradient(#3f3f41,#252526);
+}
+
+.content-container{
+  display:flex;
+  margin:30px;
+  justify-content:space-evenly;
+}
+
+/* left content */
+.square:hover{
+  background-color: aqua;
+}
+#grid_div{
+  box-sizing: border-box;
+  display:inline-grid;
+  background-color: white;
+  border:2px solid black;
+  grid-template-rows: repeat(16, 2fr);
+  grid-template-columns: repeat(16, 2fr);
+  height: 575px;
+  width: 575px;
+}
+.square{
+  background-color: white;
+  border:1px solid black;
+}
+
+
+
+/* Right Content */
+.right-content{
+  text-align: center;
+}
+
+.title,label,.choices{
+  color:white;
+}
+
+.title{
+  font-size: 24px;
+  font-weight: 800;
+}
+.right-content{
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+label{
+  font-size:16px;
+  font-weight: 700;
+}
+#container-choice{
+display:flex;
+flex-direction: column;
+gap:16px;
+}
+.choices{
+  font-size:24px;
+  font-weight: 700;
+}
+.userInput{
+  display:flex;
+  flex-direction: column;
+  gap:50px;
+
+}
+.popular-choices{
+  width:575px; 
+  box-sizing: border-box;
+  display:inline-grid;
+  grid-template-rows: repeat(3, 2fr);
+  grid-template-columns: repeat(3, 2fr);
+}
+.pop-grid{
+  background-color: white;
+  padding:20px;
+  align-items: center;
+  margin:8px;
+  border-radius: 8px;
+  font-family: sans-serif;
+  font-weight: 400;
+}
+
+.pop-grid:hover{
+  background-color:#FFC000;
+}
+/*
+
 html {
     text-align: center;
     font-family: Monaco;
@@ -32,3 +141,4 @@ html {
     height: 575px;
     width: 575px;
   }
+  */
