@@ -37,8 +37,9 @@ header{
 }
 .square{
   background-color: white;
-  border:1px solid black;
+  border:1px solid rgb(207, 207, 207);
 }
+
 
 .colorSelector{
   display:flex;
@@ -109,7 +110,7 @@ label{
   padding:2px;
 }
 
-.reset{
+.clear{
   color:white;
   font-size: 16px;
   font-weight: 700;
